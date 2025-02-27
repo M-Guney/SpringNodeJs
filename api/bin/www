@@ -21,6 +21,9 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+// Hata ayıklama için konsol mesajı ekleyelim
+console.log(`Server is running on http://localhost:${port}`);
+
 /**
  * Listen on provided port, on all network interfaces.
  */
