@@ -44,3 +44,16 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+/* git push --set-upstream origin feature/m-guney/1 de hata alınırsa 
+ERROR:
+/feature' exists; cannot create 'refs/heads/feature/m-guney/1')
+error: failed to push some refs to 'https://github.com/M-Guney/SpringNodeJs.git'
+SOLUTION:
+git branch -d feature
+git push origin --delete feature
+git push --set-upstream origin feature/m-guney/1
+
+PS C:\Users\msule\OneDrive\Belgeler\GitHub\SpringNodeJs\api> git branch -d feature
+error: branch 'feature' not found
+PS C:\Users\msule\OneDrive\Belgeler\GitHub\SpringNodeJs\api> git push origin --delete feature
+>>*/
