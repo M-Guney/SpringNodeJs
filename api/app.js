@@ -20,10 +20,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/index')); // http://localhost:3000/
-app.use('/users', require('./routes/users')); // http://localhost:3000/users
-app.use('/auditlogs', require('./routes/auditlogs')); // http://localhost:3000/auditlogs
+app.use((req, res, next) => {
+  console.log("Ben app.js te tanımlanamn Middleware'im");
+  next();
+});
 
+app.use('/api', require('./routes/index')); // http://localhost:3000/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
