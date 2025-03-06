@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema({
+const schema = mongoose.Schema({
   role_id: {type: mongoose.SchemaTypes.ObjectId, required: true},
   permission: {type: String, required: true},
   created_by: {
-    type: mongoose.SchemaTypes.ObjectId,
-    requied: true
+    type: mongoose.SchemaTypes.ObjectId//,requied: true
   }
 },{
   versionKey: false,
